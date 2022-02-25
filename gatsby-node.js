@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require("lodash")
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
@@ -16,6 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/BlogPost.tsx`)
+  const categoryPage = path.resolve(`./src/templates/CategoryPage.tsx`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -29,6 +31,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               slug
+              frontmatter {
+                tags
+              }
             }
           }
         }
@@ -46,6 +51,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allMdx.edges
 
+  const tags = _.uniq(
+    posts
+      .map(({ node }) => {
+        return node.frontmatter.tags?.split(", ")
+      })
+      .flat()
+  )
+
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
@@ -62,6 +75,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.node.id,
           previousPostId,
           nextPostId,
+        },
+      })
+    })
+  }
+
+  if (tags.length > 0) {
+    tags.forEach((tag, index) => {
+      createPage({
+        path: `category/${tag.toLowerCase()}`,
+        component: categoryPage,
+        context: {
+          tag: `/${tag}/`,
+          title: tag,
         },
       })
     })

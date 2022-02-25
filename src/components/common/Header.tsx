@@ -4,12 +4,12 @@ import { Popover, Transition } from "@headlessui/react"
 import { HomeIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { EmptyProps } from "@/definitions"
 
-const resources = ["Dashboard", "Posts", "Projects", "About"]
+const resources = ["About"]
 
 const Header: React.FC<EmptyProps> = () => {
   return (
     <Popover className="sticky top-0 z-10 bg-skin-header backdrop-blur-md backdrop-saturate-150 bg-opacity-70">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="mx-auto px-8 lg:px-24">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link
@@ -29,7 +29,7 @@ const Header: React.FC<EmptyProps> = () => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8">
             {resources.map(item => (
               <Link
-                to="/"
+                to={item.toLowerCase()}
                 key={item}
                 className="whitespace-nowrap text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-skin-focus"
               >
@@ -75,7 +75,7 @@ const Header: React.FC<EmptyProps> = () => {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 {resources.map(item => (
                   <Link
-                    to="/"
+                    to={item.toLowerCase()}
                     key={item}
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
                   >

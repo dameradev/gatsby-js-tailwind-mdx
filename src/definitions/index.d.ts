@@ -21,6 +21,9 @@ interface PageProps {
     site: ISite
   }
   location: Location
+  pageContext: {
+    title: string
+  }
 }
 
 interface ISite {

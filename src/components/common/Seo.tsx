@@ -71,14 +71,10 @@ const Seo: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
     },
   ]
 
-  const className = getTheme()
-
   return (
     <Helmet
       htmlAttributes={{
         lang,
-        class: className,
-        ...(className === "dark" && { class: className }),
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
