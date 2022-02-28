@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
 import { Location } from "history"
 
-import { Header, Bio, ThemeSwitch } from "./common"
+import { Header } from "./"
 
 interface LayoutProps {
   location: Location

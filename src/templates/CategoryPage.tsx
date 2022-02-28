@@ -1,9 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import { Seo } from "../components/common"
-import { INode, PageProps } from "@/definitions"
+import { Seo, Layout } from "../components"
+import { PageProps, INode } from "@/definitions"
 
 const CategoryPageTemplate: React.FC<PageProps> = ({
   data,
@@ -13,7 +12,8 @@ const CategoryPageTemplate: React.FC<PageProps> = ({
   const posts = data.allMdx.edges
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  // const { previous, next } = data
+
+  console.log(location)
   return (
     <Layout location={location} title={siteTitle}>
       <Seo

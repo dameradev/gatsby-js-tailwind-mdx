@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/Layout"
-import { Seo } from "../components/common"
+import { Seo } from "../components"
 import { PageProps } from "@/definitions"
 
 const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
