@@ -1,6 +1,3 @@
-// export { default as Bio } from "./Profile"
-// export { default as Button } from "./Button"
-// export { default as ThemeSwitch } from "./ThemeSwitch"
 export { default as Seo } from "./Seo"
 export { default as Header } from "./Header"
 export { default as Layout } from "./Layout"

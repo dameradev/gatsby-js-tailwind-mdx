@@ -6,23 +6,13 @@
   html,
   body {
     font-family: "Yrsa";
-    @apply bg-skin-base text-skin-fg;
+    /* @apply bg-skin-base text-skin-fg; */
+    color: #fff;
   }
 
   :root {
     --color-background: #081c15;
-    --color-background-muted: #a5a58d;
-    --color-background-medium: #a5a58d;
-
-    --color-text: #f9fafb;
-    --color-header: 17, 24, 39;
-    --color-header-text: 245, 245, 245;
-    --color-text-muted: #d1d5db;
-
-    --color-focus: #84cc16;
-    --color-anchor: #f472b6;
-    --color-anchor-hover: #ec4899;
-
+    --color-header: #0d1921;
     --color-primary: #1b4332;
     --color-secondary: #1b4332;
   }

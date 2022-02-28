@@ -19,7 +19,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
       <article itemScope itemType="http://schema.org/Article">
         <header className="grid grid-cols-blog">
           <h1
-            className="col-start-2 font-exo font-black text-skin-fg text-4xl md:text-5xl"
+            className="col-start-2 font-exo  text-4xl md:text-5xl"
             itemProp="headline"
           >
             {post.frontmatter.title}
@@ -30,7 +30,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
         </header>
         <section
           itemProp="articleBody"
-          className="grid-cols-blog prose prose-xl mt-8 mx-auto"
+          className="grid-cols-blog prose prose-xl text-white mt-8 mx-auto"
         >
           <MDXRenderer>{post.body}</MDXRenderer>
         </section>
