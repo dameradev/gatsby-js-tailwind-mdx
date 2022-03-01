@@ -26,12 +26,12 @@ const Header: React.FC<EmptyProps> = () => {
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8">
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8 uppercase">
             {resources.map(item => (
               <Link
                 to={`/${item.toLowerCase()}`}
                 key={item}
-                className="whitespace-nowrap text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-skin-focus"
+                className=" whitespace-nowrap text-lg font-medium rounded-md"
               >
                 {item}
               </Link>
@@ -72,7 +72,7 @@ const Header: React.FC<EmptyProps> = () => {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-uppercase">
                 {resources.map(item => (
                   <Link
                     to={`/${item.toLowerCase()}`}

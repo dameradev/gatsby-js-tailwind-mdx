@@ -19,6 +19,11 @@ interface PageProps {
       edges: IEdge[]
     }
     site: ISite
+    file: {
+      childImageSharp: {
+        fluid: FluidObject
+      }
+    }
   }
   location: Location
   pageContext: {

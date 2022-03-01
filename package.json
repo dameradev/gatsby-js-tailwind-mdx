@@ -28,6 +28,7 @@
     "autoprefixer": "^10.3.4",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.13.0",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^3.13.0",
     "gatsby-plugin-gatsby-cloud": "^3.1.0",
     "gatsby-plugin-google-analytics": "^3.13.0",

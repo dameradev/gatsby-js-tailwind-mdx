@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import { Location } from "history"
 
 import { Header } from "./"
+import Footer from "./Footer"
 
 interface LayoutProps {
   location: Location
@@ -14,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
   const isRootPath = location.pathname === rootPath
   return (
     <div
-      className={`relative antialiased flex flex-col selection:bg-yellow-200 selection:text-black`}
+      className={`relative antialiased min-h-screen flex flex-col selection:bg-yellow-200 selection:text-black`}
     >
       <div
         className={`${isRootPath ? "" : "hidden"} absolute top-0 right-0 m-5`}
@@ -25,6 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
       <main className="flex-1 bg-skin-primary  transition-colors px-8 lg:px-24 py-8 md:py-16 overflow-y-auto">
         {children}
       </main>
+      <Footer />
     </div>
   )
 }

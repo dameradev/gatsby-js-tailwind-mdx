@@ -14,7 +14,7 @@ const CategoriesSidebar: React.FC<CategoriesSidebarProps> = ({ tags }) => {
       <Popover className="fixed right-5 md:hidden">
         {({ open }) => (
           <>
-            <Popover.Button className="flex items-center uppercase bg-skin-header  p-2 inline-flex items-center justify-center text-skin-header-fg ">
+            <Popover.Button className="flex items-center  bg-skin-header  p-2 inline-flex items-center justify-center ">
               Categories{" "}
               {!open ? (
                 <ChevronDownIcon
@@ -40,7 +40,7 @@ const CategoriesSidebar: React.FC<CategoriesSidebarProps> = ({ tags }) => {
               <Popover.Panel className=" fixed top-36 right-5 p-4 transition transform origin-top-right md:hidden w-fit bg-skin-header ">
                 <div className="list-none text-right">
                   {tags.map(tag => (
-                    <li className="text-2xl cursor-pointer uppercase mb-4">
+                    <li className="text-2xl cursor-pointer mb-4">
                       <Link to={`/category/${tag}`}>{tag}</Link>
                     </li>
                   ))}
@@ -52,11 +52,11 @@ const CategoriesSidebar: React.FC<CategoriesSidebarProps> = ({ tags }) => {
       </Popover>
 
       <section className="hidden md:block">
-        <h3 className="text-3xl">CATEGORIES</h3>
+        <h3 className="text-3xl text-right">Tags</h3>
         <ul className="mt-4 flex flex-col items-end">
           {tags.map(tag => (
-            <li className="text-2xl cursor-pointer uppercase">
-              <Link to={`/category/${tag}`}>{tag}</Link>
+            <li className="text-2xl cursor-pointer mb-2">
+              <Link to={`/category/${tag}`}>#{tag}</Link>
             </li>
           ))}
         </ul>
