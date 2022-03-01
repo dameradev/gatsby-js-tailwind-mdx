@@ -22,8 +22,23 @@ module.exports = {
   },
   theme: {
     extend: {
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.white"),
+            a: {
+              color: theme("colors.white"),
+              "&:hover": {
+                color: theme("colors.anchor-hover"),
+              },
+            },
+            "h1,h2,h3,h4,h5,h6,tr,strong,code,p,ul,ol": {
+              color: theme("colors.white"),
+            },
+          },
+        },
+      }),
       backgroundColor: themes,
-      gradientColorStops: themes,
     },
   },
   variants: {

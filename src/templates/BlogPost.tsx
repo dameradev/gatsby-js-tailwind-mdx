@@ -32,7 +32,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
           itemProp="articleBody"
           className="grid-cols-blog prose prose-xl text-white mt-8 mx-auto"
         >
-          <MDXRenderer>{post.body}</MDXRenderer>
+          <MDXRenderer className="text-white">{post.body}</MDXRenderer>
         </section>
       </article>
       <nav className="mt-8 grid grid-cols-blog">

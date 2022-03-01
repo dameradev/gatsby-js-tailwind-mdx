@@ -29,7 +29,7 @@ const Header: React.FC<EmptyProps> = () => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-8">
             {resources.map(item => (
               <Link
-                to={item.toLowerCase()}
+                to={`/${item.toLowerCase()}`}
                 key={item}
                 className="whitespace-nowrap text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-skin-focus"
               >
@@ -75,7 +75,7 @@ const Header: React.FC<EmptyProps> = () => {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 {resources.map(item => (
                   <Link
-                    to={item.toLowerCase()}
+                    to={`/${item.toLowerCase()}`}
                     key={item}
                     className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
                   >

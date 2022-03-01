@@ -40,17 +40,17 @@ const BlogIndex: React.FC<PageProps> = ({ data, location }) => {
             const title = node.frontmatter.title || node.fields.slug
             const classes = index === 0 ? "pb-12" : "py-12"
             return (
-              <li key={node.fields.slug} className={classes}>
+              <li key={node.fields.slug} className={`${classes}`}>
                 <article itemScope itemType="http://schema.org/Article">
                   <header>
-                    <small className="font-yrsa text-skin-fg-muted text-lg">
+                    <small className=" text-skin-fg-muted text-lg">
                       {node.frontmatter.date}
                     </small>
-                    <h2 className="text-2xl font-exo font-black text-skin-fg mt-3">
+                    <h2 className="text-2xl  font-black text-skin-fg mt-3">
                       <Link
                         to={node.fields.slug}
                         itemProp="url"
-                        className="rounded-md focus:outline-none focus:ring-4 focus:ring-skin-focus"
+                        className="rounded-md   font-black focus:outline-none focus:ring-4 focus:ring-skin-focus"
                       >
                         <span itemProp="headline">{title}</span>
                       </Link>
