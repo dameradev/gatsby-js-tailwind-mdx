@@ -11,9 +11,8 @@
   }
 
   :root {
-    --color-background: #081c15;
-    --color-header: #0d1921;
     --color-primary: #1b4332;
-    --color-secondary: #1b4332;
+    --color-background: #081c15;
+    --color-dark-blue: #0d1921;
   }
 }

@@ -7,12 +7,12 @@ import { EmptyProps } from "@/definitions"
 import { Github, Linkedin, Twitter } from "./icons"
 const Footer: React.FC<EmptyProps> = () => {
   return (
-    <footer className=" z-10 bg-skin-header backdrop-blur-md backdrop-saturate-150 bg-opacity-70 px-8 lg:px-24">
+    <footer className=" z-10 bg-darkBlue backdrop-blur-md backdrop-saturate-150 bg-opacity-70 px-8 lg:px-24">
       <div className="mx-auto  py-10  flex">
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <Link
             to="/"
-            className="rounded-md text-skin-header-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+            className="rounded-md text-darkBlue-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
           >
             <span className="sr-only">Home</span>
             <HomeIcon className="h-8 w-auto" />

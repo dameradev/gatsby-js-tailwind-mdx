@@ -38,7 +38,7 @@ const About: React.FC<PageProps> = ({ data, location }) => {
           </ul>
         </div>
         <div className="block w-1/4">
-          <AboutUs className="fill-skin-header" />
+          <AboutUs className="fill-darkBlue" />
         </div>
       </div>
     </Layout>

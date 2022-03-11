@@ -23,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
         {/* <ThemeSwitch /> */}
       </div>
       {<Header />}
-      <main className="flex-1 bg-skin-primary  transition-colors px-8 lg:px-24 py-8 md:py-16 overflow-y-auto">
+      <main className="flex-1 bg-primary  transition-colors px-8 lg:px-24 py-8 md:py-16 overflow-y-auto">
         {children}
       </main>
       <Footer />

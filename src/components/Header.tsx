@@ -8,20 +8,20 @@ const resources = ["About"]
 
 const Header: React.FC<EmptyProps> = () => {
   return (
-    <Popover className="sticky top-0 z-10 bg-skin-header backdrop-blur-md backdrop-saturate-150 bg-opacity-70">
+    <Popover className="sticky top-0 z-10 bg-darkBlue backdrop-blur-md backdrop-saturate-150 bg-opacity-70">
       <div className="mx-auto px-8 lg:px-24">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link
               to="/"
-              className="rounded-md text-skin-header-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+              className="rounded-md text-darkBlue-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
             >
               <span className="sr-only">Home</span>
               <HomeIcon className="h-8 w-auto" />
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-skin-header rounded-md p-2 inline-flex items-center justify-center text-skin-header-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus">
+            <Popover.Button className="bg-darkBlue rounded-md p-2 inline-flex items-center justify-center text-darkBlue-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -53,7 +53,7 @@ const Header: React.FC<EmptyProps> = () => {
           focus
           className="z-50 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
-          <div className="rounded-lg shadow-lg ring-1 ring-skin-header ring-opacity-5 bg-skin-header text-skin-header-fg border divide-y-2 divide-skin-header-muted">
+          <div className="rounded-lg shadow-lg ring-1 ring-darkBlue ring-opacity-5 bg-darkBlue text-darkBlue-fg border divide-y-2 divide-darkBlue-muted">
             <div className="pt-5 pb-6 px-5">
               <div className="z-50 flex items-center justify-between">
                 <Link
@@ -64,7 +64,7 @@ const Header: React.FC<EmptyProps> = () => {
                   <HomeIcon className="h-8 w-auto" />
                 </Link>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-skin-header rounded-md p-2 inline-flex items-center justify-center text-skin-header-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus">
+                  <Popover.Button className="bg-darkBlue rounded-md p-2 inline-flex items-center justify-center text-darkBlue-fg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -77,7 +77,7 @@ const Header: React.FC<EmptyProps> = () => {
                   <Link
                     to={`/${item.toLowerCase()}`}
                     key={item}
-                    className="text-lg font-medium text-skin-header-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
+                    className="text-lg font-medium text-darkBlue-fg rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-focus"
                   >
                     {item}
                   </Link>

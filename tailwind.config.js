@@ -1,12 +1,9 @@
 const themes = {
-  skin: {
-    base: "var(--color-background)",
-    primary: "var(--color-primary)",
-    secondary: "var(--color-secondary)",
-    header: "var(--color-header)",
-    gridTemplateColumns: {
-      blog: "1fr min(600px, 100%) 1fr",
-    },
+  primary: "var(--color-primary)",
+  secondary: "var(--color-secondary)",
+  darkBlue: "var(--color-dark-blue)",
+  gridTemplateColumns: {
+    blog: "1fr min(600px, 100%) 1fr",
   },
 }
 

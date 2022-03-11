@@ -14,7 +14,7 @@ const CategoriesSidebar: React.FC<CategoriesSidebarProps> = ({ tags }) => {
       <Popover className="fixed right-5 md:hidden">
         {({ open }) => (
           <>
-            <Popover.Button className="flex items-center  bg-skin-header  p-2 inline-flex items-center justify-center ">
+            <Popover.Button className="flex items-center  bg-darkBlue  p-2 inline-flex items-center justify-center ">
               Categories{" "}
               {!open ? (
                 <ChevronDownIcon
@@ -37,7 +37,7 @@ const CategoriesSidebar: React.FC<CategoriesSidebarProps> = ({ tags }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-0"
             >
-              <Popover.Panel className=" fixed top-36 right-5 p-4 transition transform origin-top-right md:hidden w-fit bg-skin-header ">
+              <Popover.Panel className=" fixed top-36 right-5 p-4 transition transform origin-top-right md:hidden w-fit bg-darkBlue ">
                 <div className="list-none text-right">
                   {tags.map(tag => (
                     <li className="text-2xl cursor-pointer mb-4">
