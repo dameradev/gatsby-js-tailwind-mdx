@@ -3,6 +3,7 @@ import { PageProps } from "@/definitions"
 import { graphql } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
+import { AboutUs } from "@/components/icons"
 
 const About: React.FC<PageProps> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -10,44 +11,34 @@ const About: React.FC<PageProps> = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={"About us"} />
-      <h1 className="text-5xl capitalize mb-12">About us</h1>
+      <h1 className="text-5xl capitalize mb-12">About course</h1>
       <div className="flex items-center gap-24">
-        <div className="">
-          <p className="text-xl mb-8">
-            If you’ve ever wanted to learn how to travel cheaper, experience a
-            destination’s authentic side, and turn your dream trip into a
-            reality, you are in the right place. This website will give you
-            road-tested tips, advice, and suggestions so you can see and do more
-            for less. On this website, you will find:
+        <div className="w-3/4">
+          <p className="text-xl mb-4">
+            This course is meant for anyone who has basic knowledge of React and
+            Javascript, and wants to dive deeper and learn Gatsby JS and static
+            site generation. We will explore how to build a basic blog using MD
+            (markdown), and style everything without writting a single line of
+            css code. Keep in mind that knowledge of css is needed, we will use
+            tailwind to speed up the process and make our lives easier.
           </p>
-          <ul className="ml-6 list-disc flex flex-col gap-2 text-xl">
-            <li>Tested travel tips from years of experience</li>
-            <li>Interviews with other travel experts</li>
+          <p className="text-xl mb-8">
+            Below you will find a list of what you will gain
+          </p>
+          <ul className="ml-6 list-disc flex flex-col gap-4 text-xl">
+            <li>Setup Gatsby project with Tailwind and Typescript</li>
+            <li>Install and setup Gatsby plugins</li>
+            <li>Generate static pages using gatsby Internal processes</li>
+            <li>Work with svgs and images</li>
             <li>
-              Case studies and profiles of other travelers from various
-              backgrounds, genders, colors, and nationalities
+              Use mdx for static blog post generation (can be used for any type
+              of content ex: portfolio project)
             </li>
-            <li>
-              A community of supportive travelers to help encourage you to keep
-              going
-            </li>
-            <li>
-              Detailed cost breakdowns to help you better budget for your trip
-            </li>
-            <li>
-              Travel tips that can be applied to any destination in the world
-            </li>
-            <li>
-              In-depth reporting that lets you know which sites really do help
-              you save money!
-            </li>
+            <li>Publish project on github and deploy site to netlify</li>
           </ul>
         </div>
-        <div className="block w-full">
-          <Img
-            fluid={data.file.childImageSharp.fluid}
-            alt="A corgi smiling happily"
-          />
+        <div className="block w-1/4">
+          <AboutUs className="fill-skin-header" />
         </div>
       </div>
     </Layout>

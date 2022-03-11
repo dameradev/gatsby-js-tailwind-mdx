@@ -20,7 +20,9 @@ const CategoryPageTemplate: React.FC<PageProps> = ({
         title={pageContext.title}
         description={`Explore all of our ${pageContext.title} posts`}
       />
-      <h1 className="text-6xl mb-10 font-bold">{pageContext.title}</h1>
+      <h1 className="text-6xl mb-24 font-bold">
+        #{pageContext.title.toLowerCase()}
+      </h1>
       <ol className="divide-y divide-skin-fg-muted max-w-2xl">
         {posts.map(({ node }: { node: INode }, index: number) => {
           const title = node.frontmatter.title || node.fields.slug

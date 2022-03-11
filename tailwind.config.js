@@ -39,6 +39,7 @@ module.exports = {
         },
       }),
       backgroundColor: themes,
+      colors: themes,
     },
   },
   variants: {
