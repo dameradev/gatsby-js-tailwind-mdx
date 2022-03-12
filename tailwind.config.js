@@ -29,7 +29,7 @@ module.exports = {
                 color: theme("colors.anchor-hover"),
               },
             },
-            "h1,h2,h3,h4,h5,h6,tr,strong,code,p,ul,ol": {
+            "h1,h2,h3,h4,h5,h6,tr,strong,code,p,ul,ol,th": {
               color: theme("colors.white"),
             },
           },

@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Blog Starter`,
+    title: `Gatsby X TailwindCSS X Mdx course`,
     author: {
-      name: `Same Ramos`,
-      summary: `same.ramos@example.com`,
+      name: `Damjan Radev`,
+      summary: `radevdevelopment@gmail.com`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://cranky-snyder-8f909e.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `dameradev`,
       linkedin: `kylemathews`,
-      github: `KyleAMathews`,
+      github: `dameradev`,
     },
   },
   plugins: [
@@ -55,12 +55,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -110,7 +104,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby RSS feed",
+            title: "Gatsby X TailwindCSS X Mdx course",
           },
         ],
       },
